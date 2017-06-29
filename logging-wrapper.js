@@ -1,5 +1,7 @@
 var wrapLog = function(callback, name) {
-  var name = name;
+
+  return function() {return `${name}(${Array.from(arguments)} => ${callback.apply(this, arguments)})`;};
+  /*var name = name;
   var info = "";
   return function() {
     var x = arguments[0];
@@ -12,7 +14,7 @@ var wrapLog = function(callback, name) {
       info = `volume(${x}, ${y}, ${z}) => ${volume(x, y, z)}`;
     }
     return info;
-  };
+  };*/
 };
 
 var area = function(x, y) {
