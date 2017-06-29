@@ -8,13 +8,21 @@ var students = [
 function compare(a, b) {
   var nameA = a.name;
   var nameB = b.name;
+  var ageA = a.age;
+  var ageB = b.age;
 
   if(nameA < nameB) {
     return -1;
   } else if(nameA > nameB) {
     return 1;
   } else {
-    return 0;
+    if(a.age < b.age) {
+      return 1;
+    } else if(a.age > b.age) {
+      return -1;
+    } else {
+      return 0;
+    }
   }
 }
 
