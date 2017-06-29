@@ -1,9 +1,9 @@
 function findWaldo(arr, found) {
-  for(var i = 0; i < arr.length; i++) {
-    if(arr[i] === "Waldo") {
-      found(i);
+  arr.forEach(function(element, index) {
+    if(element === "Waldo") {
+      found(index);
     }
-  }
+  })
 }
 
 function actionWhenFound(index) {
