@@ -16,13 +16,7 @@ function compare(a, b) {
   } else if(nameA > nameB) {
     return 1;
   } else {
-    if(a.age < b.age) {
-      return 1;
-    } else if(a.age > b.age) {
-      return -1;
-    } else {
-      return 0;
-    }
+    return b.age - a.age;
   }
 }
 
